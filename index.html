@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Call to servicenow</title>
+</head>
+
+<body>
+<div id="count">1</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+// setInterval(function(){ 
+//     // $.get('https://dev75352.service-now.com?user=admin&digest=PDmvqT4LEsKPHwixhIjr1K0uWFg=',function(data,status) {
+//     //     console.log('success');
+//     //  },'html');
+//      window.open('https://dev75352.service-now.com?user=admin&digest=PDmvqT4LEsKPHwixhIjr1K0uWFg=');
+// }, 15000);
+var count = document.getElementById('count');
+    var hour = new Date().getHours();
+if(hour > 14) {
+    setInterval( function(){ 
+    document.getElementById('count').innerHTML += 1;
+} , 5000);
+}
+</script>
+</body>
+
+</html>
